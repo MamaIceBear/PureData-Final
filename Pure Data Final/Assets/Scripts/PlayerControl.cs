@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     public float jumpPower = 10f;
     Rigidbody2D myRigidbody;
+    public int numJumps = 1;
     bool isGrounded = false;
     float posX = 0.0f;
     bool isGameOver = false;
@@ -18,11 +19,12 @@ public class PlayerControl : MonoBehaviour
        myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
     }
 
-    void FixedUpdate() 
+    void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded && !isGameOver)
+        if(Input.GetKeyDown(KeyCode.Space) && numJumps > 0 && !isGameOver)
         {
             myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
+            numJumps -=1;
         }
         if(transform.position.x < posX)
         {
@@ -30,10 +32,6 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void Update() 
-    {
-        
-    }
 
     void GameOver()
     {
@@ -45,27 +43,13 @@ public class PlayerControl : MonoBehaviour
     {
         if(other.collider.tag == "Ground")
         {
-            isGrounded = true;
+            numJumps =1;
         }
         if(other.collider.tag == "Hazard")
         {
             isGameOver = true;
+            Debug.Log("WOMP WOMP");
         }
     }
-
-    void OnCollisionStay2D(Collision2D other) 
-    {
-        if(other.collider.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D other) 
-    {
-        if(other.collider.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
+    
 }

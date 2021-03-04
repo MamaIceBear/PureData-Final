@@ -8,6 +8,7 @@ public class ChallengeController : MonoBehaviour
     public GameObject[] challenges; 
     public float frequency = 0.5f;
     float counter = 0.0f;
+    
     public Transform challengesSpawnPoint;
     bool isGameOver = false;
 
