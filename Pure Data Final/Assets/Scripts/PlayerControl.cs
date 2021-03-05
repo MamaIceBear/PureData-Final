@@ -7,7 +7,6 @@ public class PlayerControl : MonoBehaviour
     public float jumpPower = 10f;
     Rigidbody2D myRigidbody;
     public int numJumps = 1;
-    bool isGrounded = false;
     float posX = 0.0f;
     bool isGameOver = false;
     ChallengeController myChallengeController;
