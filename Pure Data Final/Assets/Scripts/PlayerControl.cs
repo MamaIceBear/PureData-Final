@@ -23,7 +23,8 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && numJumps > 0 && !isGameOver)
         {
             myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
-            numJumps -=1;
+            numJumps -= 1;
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/jump", 1);
         }
         if(transform.position.x < posX)
         {
