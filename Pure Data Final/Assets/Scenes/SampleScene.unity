@@ -378,7 +378,7 @@ MonoBehaviour:
   clipGain: 0
   sprite: {fileID: 537617455}
   sizeFactor: 3
-  minSize: 0.3
+  minSize: 0.2
   maxSize: 4
 --- !u!1 &705507993
 GameObject:
