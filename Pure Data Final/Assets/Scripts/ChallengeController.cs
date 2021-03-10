@@ -11,6 +11,7 @@ public class ChallengeController : MonoBehaviour
     
     public Transform challengesSpawnPoint;
     bool isGameOver = false;
+    bool crashSound = true;
 
     void Start()
     {
@@ -21,6 +22,11 @@ public class ChallengeController : MonoBehaviour
     {
         if(isGameOver)
         {
+            if(crashSound)
+            {
+                OSCHandler.Instance.SendMessageToClient("pd", "/unity/crash", 1);
+                crashSound = false;
+            }
             return;
         }
         //Generate Objects

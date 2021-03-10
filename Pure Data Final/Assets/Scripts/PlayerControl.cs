@@ -43,7 +43,8 @@ public class PlayerControl : MonoBehaviour
     {
         if(other.collider.tag == "Ground")
         {
-            numJumps =1;
+            numJumps = 1;
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/landing", 1);
         }
         if(other.collider.tag == "Hazard")
         {
@@ -51,5 +52,4 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("WOMP WOMP");
         }
     }
-    
 }
