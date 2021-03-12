@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSpectrum : MonoBehaviour {
+public class AudioReactiveEngine : MonoBehaviour {
 
     public static float spectrumValue {get; private set;}
     

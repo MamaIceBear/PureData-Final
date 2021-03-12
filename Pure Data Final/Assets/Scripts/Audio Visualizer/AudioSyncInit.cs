@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AudioSyncer : MonoBehaviour {
+public class AudioSyncInit : MonoBehaviour {
     
     public float bias;
 	public float timeStep;
@@ -27,7 +27,7 @@ public class AudioSyncer : MonoBehaviour {
 	{ 
 		// update audio value
 		m_previousAudioValue = m_audioValue;
-		m_audioValue = AudioSpectrum.spectrumValue;
+		m_audioValue = AudioReactiveEngine.spectrumValue;
 
 		// if audio value went below the bias during this frame
 		if (m_previousAudioValue > bias &&

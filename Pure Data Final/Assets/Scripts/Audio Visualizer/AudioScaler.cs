@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSyncScale : AudioSyncer {
+public class AudioScaler : AudioSyncInit {
 
 	public Vector3 beatScale;
 	public Vector3 restScale;
