@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349030353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -446,7 +446,10 @@ MonoBehaviour:
   scrollSpeed: 5
   challenges:
   - {fileID: 8424236854731037483, guid: cb9b15be125e13744b5d78a83e324949, type: 3}
-  frequency: 0.5
+  - {fileID: 8928682789145304812, guid: 5c5c52abb3fd5264086d4c36d44180bd, type: 3}
+  - {fileID: 4373944734125173316, guid: 11cc02a2c985ad24e9a887af1f2da6fc, type: 3}
+  - {fileID: 8460312854948913484, guid: 23cc5eb5f191795488d7292bb8835bfb, type: 3}
+  frequency: 0.45
   challengesSpawnPoint: {fileID: 349030354}
 --- !u!1 &1473336591
 GameObject:
@@ -526,7 +529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473336591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -561,7 +564,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 4.5
   m_Material: {fileID: 6200000, guid: 0e782d15c59f4fd4f920a5f7f93e36fa, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -699,7 +702,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 311a8088225acb945a9bba7175379bbe, type: 3}
-  m_Color: {r: 0.6693893, g: 0.745283, b: 0.2917853, a: 1}
+  m_Color: {r: 0.53165185, g: 0.048727296, b: 0.6886792, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

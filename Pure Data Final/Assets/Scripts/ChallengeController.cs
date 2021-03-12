@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChallengeController : MonoBehaviour
 {
-    public float scrollSpeed = 5.0f;
+    public float scrollSpeed = 1.0f;
     public GameObject[] challenges; 
-    public float frequency = 0.5f;
+    public float frequency = 0.9f;
     float counter = 0.0f;
     
     public Transform challengesSpawnPoint;
@@ -45,7 +45,7 @@ public class ChallengeController : MonoBehaviour
         {
             currentChild = transform.GetChild(i).gameObject;
             ScrollChallenge(currentChild);
-            if(currentChild.transform.position.x <= -15.0f)
+            if(currentChild.transform.position.x <= -20.0f)
             {
                 Destroy(currentChild);
             }
