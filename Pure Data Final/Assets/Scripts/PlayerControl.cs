@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
             myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
             numJumps -= 1;
             OSCHandler.Instance.SendMessageToClient("pd", "/unity/jump", 1);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/height", transform.position.y);
         }
         if(transform.position.x < posX)
         {
