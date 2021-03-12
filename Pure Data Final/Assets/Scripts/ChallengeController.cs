@@ -8,7 +8,8 @@ public class ChallengeController : MonoBehaviour
     public GameObject[] challenges; 
     public float frequency = 0.9f;
     float counter = 0.0f;
-    
+    string previousObj = "";
+
     public Transform challengesSpawnPoint;
     bool isGameOver = false;
     bool crashSound = true;
@@ -59,9 +60,16 @@ public class ChallengeController : MonoBehaviour
 
     void GenerateRandomChallenge()
     {
-        GameObject newChallenge = Instantiate(challenges[Random.Range(0, challenges.Length)], challengesSpawnPoint.transform);
+        GameObject chosenChallenge = challenges[Random.Range(0, challenges.Length)];
+        while(previousObj == chosenChallenge.name)
+        {
+            chosenChallenge = challenges[Random.Range(0, challenges.Length)];
+        }
+        GameObject newChallenge = Instantiate(chosenChallenge, challengesSpawnPoint.transform);
         newChallenge.transform.parent = transform;
+        previousObj = chosenChallenge.name;
         counter++;
+        
     }
 
     public void GameOver()
