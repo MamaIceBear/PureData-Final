@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
        myRigidbody = GetComponent<Rigidbody2D>();
        posX = transform.position.x;
        myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
+       OSCHandler.Instance.SendMessageToClient("pd", "/unity/musicStart", 1);
     }
 
     void Update() 
@@ -38,6 +39,7 @@ public class PlayerControl : MonoBehaviour
     {
         isGameOver = true;
         myChallengeController.GameOver();
+        OSCHandler.Instance.SendMessageToClient("pd", "/unity/musicStart", 0);
     }
 
     void OnCollisionEnter2D(Collision2D other) 
