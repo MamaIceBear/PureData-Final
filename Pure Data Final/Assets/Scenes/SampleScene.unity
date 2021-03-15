@@ -5962,6 +5962,8 @@ MonoBehaviour:
   - {fileID: 8928682789145304812, guid: 5c5c52abb3fd5264086d4c36d44180bd, type: 3}
   - {fileID: 4373944734125173316, guid: 11cc02a2c985ad24e9a887af1f2da6fc, type: 3}
   - {fileID: 8460312854948913484, guid: 23cc5eb5f191795488d7292bb8835bfb, type: 3}
+  - {fileID: 1438825566371324641, guid: 85686ec8caba26e46b036f9f75b9133d, type: 3}
+  - {fileID: 1589391248094662256, guid: 0e98a2685eb705e4780def19aa0a479d, type: 3}
   frequency: 0.4
   challengesSpawnPoint: {fileID: 349030354}
 --- !u!1 &1107444510

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PureDataSender : MonoBehaviour
 {
+    Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +15,18 @@ public class PureDataSender : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        OSCHandler.Instance.UpdateLogs();
+        Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
+        servers = OSCHandler.Instance.Servers;
+        foreach(KeyValuePair<string, ServerLog> item in servers)
+        {
+            if(item.Value.log.Count > 0)
+            {
+                int lastPacketIndex = item.Value.packets.Count - 1;
+                Debug.Log(item.Value.packets[lastPacketIndex].Address.ToString());
+            }
+        }
     }
 }

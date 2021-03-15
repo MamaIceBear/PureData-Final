@@ -129,13 +129,6 @@ public class OSCHandler : MonoBehaviour
 	/// </summary>
 	void OnApplicationQuit() 
 	{
-		// OSCHandler.Instance.SendMessageToClient("pd", "/unity/distance/enable", 0);
-		// OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/lowFreq", 0);
-        // OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/bpFreq", 0);
-        // OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/hpFreq", 0);
-        // OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/lowFreqGain", 0);
-        // OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/bpFreqGain", 0);
-        // OSCHandler.Instance.SendMessageToClient("pd", "/unity/whiteNoise/hpFreqGain", 0);
 		foreach(KeyValuePair<string,ClientLog> pair in _clients)
 		{
 			pair.Value.client.Close();
