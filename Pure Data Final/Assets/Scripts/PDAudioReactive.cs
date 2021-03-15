@@ -13,8 +13,6 @@ public class PDAudioReactive : MonoBehaviour
     public GameObject sprite;
 
     public Color restColor = new Color (255f, 255f, 255f, 0f);
-    public Color beatColor;
-    private Color defColor;
     public float TimeToRest = 5f;
     
     private Image m_img;
@@ -22,19 +20,17 @@ public class PDAudioReactive : MonoBehaviour
     private void Start() {
         m_img = GetComponent<Image>();
         sprite = gameObject;
-        defColor = beatColor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (minFreq < frequency && frequency > maxFreq){
+        if (minFreq <= frequency && frequency < maxFreq){
             m_img.color = Color.Lerp(m_img.color, freqToColor(), TimeToRest * Time.deltaTime);
         }
         else{
             m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
         }
-        
     }
 
     private Color freqToColor(){
