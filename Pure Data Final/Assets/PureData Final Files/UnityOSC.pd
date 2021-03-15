@@ -236,9 +236,9 @@ a structure. By Sam Nguyen;
 #X connect 17 0 11 1;
 #X connect 18 0 8 0;
 #X restore 297 134 pd crashing;
-#N canvas 144 167 1085 694 music 1;
+#N canvas 144 167 1085 694 music 0;
 #X floatatom 713 253 5 0 0 0 - - -;
-#X obj 400 465 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+#X obj 400 465 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -258113
 -1 -1 12700 1;
 #X obj 660 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -454,7 +454,7 @@ a structure. By Sam Nguyen;
 #X connect 6 0 7 0;
 #X connect 7 0 1 1;
 #X restore 572 322 pd bass;
-#X obj 404 171 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+#X obj 404 171 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -258113
 -1 -1 11700 1;
 #X floatatom 309 299 5 0 0 0 - - -;
 #X text 180 287 Melody Synth;
