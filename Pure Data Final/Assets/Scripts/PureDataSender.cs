@@ -24,11 +24,8 @@ public class PureDataSender : MonoBehaviour
         {
             if(item.Value.log.Count > 0)
             {
-                int lastPacketIndex = item.Value.packets.Count - 1;
-                
-                Debug.Log(item.Value.packets[lastPacketIndex].Address.ToString());
-
-                Debug.Log(item.Value.packets[lastPacketIndex].Data[0].ToString());
+                Debug.Log(item.Value.packets[0].Address);
+                Debug.Log(item.Value.packets[0].Data[0].ToString());
             }
         }
     }
