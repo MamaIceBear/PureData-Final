@@ -14,32 +14,32 @@ public class AudioGainReactive : MonoBehaviour
     public float clipGain;
     private float[] clipSampData;
 
-   public GameObject sprite;
-   public float sizeFactor = 1;
+    public GameObject sprite;
+    public float sizeFactor = 1;
 
-   public float minSize = 0;
-   public float maxSize = 500;
+    public float minSize = 0;
+    public float maxSize = 500;
 
-   private void Awake() {
-       clipSampData = new float[sampleDataLen];
-   }
+    private void Awake() {
+        clipSampData = new float[sampleDataLen];
+    }
 
-   private void Update() {
-       currentUpdateTime += Time.deltaTime;
-       if (currentUpdateTime >= updateStep){
-           currentUpdateTime = 0f;
-           audioSource.clip.GetData(clipSampData, audioSource.timeSamples);
-           clipGain = 0f;
-           foreach (var sample in clipSampData){
-               clipGain += Mathf.Abs(sample);
-           }
-           clipGain /= sampleDataLen;
+    private void Update() {
+        currentUpdateTime += Time.deltaTime;
+        if (currentUpdateTime >= updateStep){
+            currentUpdateTime = 0f;
+            audioSource.clip.GetData(clipSampData, audioSource.timeSamples);
+            clipGain = 0f;
+            foreach (var sample in clipSampData){
+                clipGain += Mathf.Abs(sample);
+            }
+            clipGain /= sampleDataLen;
 
-           clipGain *= sizeFactor;
-           clipGain = Mathf.Clamp(clipGain, minSize, maxSize);
-           sprite.transform.localScale = new Vector3(clipGain, clipGain, clipGain);
+            clipGain *= sizeFactor;
+            clipGain = Mathf.Clamp(clipGain, minSize, maxSize);
+            sprite.transform.localScale = new Vector3(clipGain, clipGain, clipGain);
 
-       }
-   }
+        }
+    }
 
 }

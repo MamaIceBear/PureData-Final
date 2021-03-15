@@ -6,12 +6,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class PDAudioReactive : MonoBehaviour
 {
-    public float minScale = 25f;
-    public float maxScale = 100f;
-
-    public float scaleFactor = 1f;
+    public float minFreq;
+    public float maxFreq;
+    
     public float frequency;
-    public float gain;
     public GameObject sprite;
 
     public Color restColor = new Color (255f, 255f, 255f, 0f);
@@ -30,18 +28,13 @@ public class PDAudioReactive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gain *= scaleFactor;
-        gain = Mathf.Clamp(gain, minScale, maxScale);
-        sprite.transform.localScale = new Vector3 (gain, gain, gain);
-
-        if (gain == minScale){
-            beatColor = restColor;
+        if (minFreq < frequency && frequency > maxFreq){
+            m_img.color = Color.Lerp(m_img.color, freqToColor(), TimeToRest * Time.deltaTime);
         }
         else{
-            beatColor = freqToColor();
+            m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
         }
-
-        m_img.color = Color.Lerp(m_img.color, beatColor, TimeToRest * Time.deltaTime);
+        
     }
 
     private Color freqToColor(){
