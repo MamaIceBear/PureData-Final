@@ -28,7 +28,7 @@ public class PDAudioReactive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (minFreq < frequency && frequency > maxFreq){
+        if (minFreq <= frequency && frequency < maxFreq){
             m_img.color = Color.Lerp(m_img.color, freqToColor(), TimeToRest * Time.deltaTime);
         }
         else{
