@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     float posX = 0.0f;
     bool isGameOver = false;
     ChallengeController myChallengeController;
+    public ParticleSystem dust;
 
     void Start()
     {
@@ -46,6 +47,7 @@ public class PlayerControl : MonoBehaviour
     {
         if(other.collider.tag == "Ground")
         {
+            dust.Play();
             numJumps = 1;
             OSCHandler.Instance.SendMessageToClient("pd", "/unity/landing", 1);
         }
