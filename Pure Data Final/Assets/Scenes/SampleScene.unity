@@ -5050,7 +5050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: 509.14, y: 65.5}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281108030
@@ -5065,12 +5065,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 1047
+  maxFreq: 2093
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &281108031
 MonoBehaviour:
@@ -5085,7 +5084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5222,7 +5221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: 181, y: 65.5}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406508535
@@ -5237,12 +5236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 262
+  maxFreq: 523
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &406508536
 MonoBehaviour:
@@ -5257,7 +5255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5316,7 +5314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: 344, y: 65.49999}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549967222
@@ -5331,12 +5329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 523
+  maxFreq: 1047
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &549967223
 MonoBehaviour:
@@ -5351,7 +5348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5502,7 +5499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: 0.0000038146973, y: 65.5}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753725199
@@ -5517,12 +5514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 131
+  maxFreq: 262
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &753725200
 MonoBehaviour:
@@ -5537,7 +5533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5762,7 +5758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e509647bd93e6d64aa96777b018fb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 5
+  scrollSpeed: 0
   challenges:
   - {fileID: 8424236854731037483, guid: cb9b15be125e13744b5d78a83e324949, type: 3}
   frequency: 0
@@ -5802,8 +5798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
-  m_SizeDelta: {x: 83.714264, y: 488.99994}
+  m_AnchoredPosition: {x: -509.14, y: 65.5}
+  m_SizeDelta: {x: 83.71423, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374889063
 MonoBehaviour:
@@ -5822,7 +5818,6 @@ MonoBehaviour:
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &1374889064
 MonoBehaviour:
@@ -5837,7 +5832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6043,7 +6038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: -173, y: 65.5}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652469086
@@ -6058,12 +6053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 66
+  maxFreq: 131
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &1652469087
 MonoBehaviour:
@@ -6078,7 +6072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6137,7 +6131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188.1, y: 65.5}
+  m_AnchoredPosition: {x: -337, y: 65.5}
   m_SizeDelta: {x: 83.714264, y: 488.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828205228
@@ -6152,12 +6146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 0
-  maxFreq: 33
+  minFreq: 33
+  maxFreq: 66
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 255, g: 255, b: 255, a: 0}
-  beatColor: {r: 0, g: 0.6509804, b: 1, a: 1}
   TimeToRest: 5
 --- !u!114 &1828205229
 MonoBehaviour:
@@ -6172,7 +6165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.65242577, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
