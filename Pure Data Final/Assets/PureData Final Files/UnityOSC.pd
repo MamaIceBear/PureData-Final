@@ -8,7 +8,14 @@
 #X msg 212 115 connect 127.0.0.1 8000;
 #X msg 212 144 disconnect;
 #X msg 212 85 connect localhost 8001;
-#X obj 125 35 r oscOut2;
+#X obj 436 43 r oscOut2;
+#X obj 436 87 list prepend send;
+#X obj 436 128 list trim;
+#X obj 435 209 netsend -u -b;
+#X obj 593 64 loadbang;
+#X msg 593 130 connect 127.0.0.1 8000;
+#X msg 593 159 disconnect;
+#X msg 593 100 connect localhost 8002;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -16,7 +23,13 @@
 #X connect 5 0 3 0;
 #X connect 6 0 3 0;
 #X connect 7 0 3 0;
-#X connect 8 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 12 0 15 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;
 #X restore 132 28 pd oscSend;
 #N canvas 74 180 1238 612 oscReceive 0;
 #X msg 396 104 listen 8000;
@@ -242,7 +255,7 @@ a structure. By Sam Nguyen;
 #X floatatom 713 253 5 0 0 0 - - -;
 #X obj 400 465 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -258113
 -1 -1 10600 1;
-#X obj 660 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 660 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 654 100 r musicStart;
 #X obj 525 150 metro 1680;
@@ -251,7 +264,7 @@ a structure. By Sam Nguyen;
 #X floatatom 753 184 5 0 0 0 - - -;
 #X obj 722 276 s Melnotes;
 #X obj 157 468 r Melnotes;
-#N canvas 0 50 698 655 melSynth 1;
+#N canvas 170 195 698 655 melSynth 1;
 #X floatatom 48 58 5 0 0 0 - - -;
 #X obj 51 130 mtof;
 #X obj 129 582 dac~;
@@ -440,7 +453,7 @@ a structure. By Sam Nguyen;
 -1 -1 4600 1;
 #X floatatom 309 299 5 0 0 0 - - -;
 #X text 180 287 Melody Synth;
-#N canvas 0 50 920 655 bassSynth 1;
+#N canvas 617 150 920 655 bassSynth 1;
 #X floatatom 48 58 5 0 0 0 - - -;
 #X obj 51 130 mtof;
 #X obj 129 582 dac~;
