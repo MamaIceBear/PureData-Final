@@ -43,7 +43,6 @@ public class PlayerControl : MonoBehaviour
         isGameOver = true;
         myChallengeController.GameOver();
         OSCHandler.Instance.SendMessageToClient("pd", "/unity/musicStart", 0);
-        OSCHandler.Instance.SendMessageToClient("pd", "/unity/toggle", 0);
     }
 
     void OnCollisionEnter2D(Collision2D other) 
