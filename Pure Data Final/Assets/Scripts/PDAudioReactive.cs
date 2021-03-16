@@ -16,7 +16,7 @@ public class PDAudioReactive : MonoBehaviour
     public float frequency;
     public GameObject sprite;
 
-    public Color restColor = new Color (255f, 255f, 255f, 0f);
+    public Color restColor = new Color (0f, 0f, 0f, 0f);
     public float TimeToRest = 5f;
     
     private Image m_img;
@@ -29,16 +29,6 @@ public class PDAudioReactive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (minFreq <= frequency && frequency < maxFreq){
-            m_img.color = Color.Lerp(m_img.color, freqToColor(), TimeToRest * Time.deltaTime);
-        }
-        else{
-            m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
-        }
-    }
-
-    void FixedUpdate()
-    {
         OSCHandler.Instance.UpdateLogs();
         Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
         servers = OSCHandler.Instance.Servers;
@@ -48,8 +38,17 @@ public class PDAudioReactive : MonoBehaviour
             {
                 Debug.Log(item.Value.packets[0].Address);
                 Debug.Log(item.Value.packets[0].Data[0].ToString());
-                frequency = float.Parse(item.Value.packets[0].Data[0].ToString());
+                if (item.Value.packets[0].Address == "/melodyFreq"){
+                    frequency = float.Parse(item.Value.packets[0].Data[0].ToString());
+                }
             }
+        }
+
+        if (minFreq <= frequency && frequency < maxFreq){
+            m_img.color = Color.Lerp(m_img.color, freqToColor(), TimeToRest * Time.deltaTime);
+        }
+        else{
+            m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
         }
     }
 

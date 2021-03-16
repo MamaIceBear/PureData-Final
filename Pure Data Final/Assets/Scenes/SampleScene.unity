@@ -5148,7 +5148,7 @@ MonoBehaviour:
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
-  restColor: {r: 255, g: 255, b: 255, a: 0}
+  restColor: {r: 0, g: 0, b: 0, a: 0}
   TimeToRest: 5
 --- !u!114 &406508536
 MonoBehaviour:
@@ -5242,7 +5242,7 @@ MonoBehaviour:
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
-  restColor: {r: 255, g: 255, b: 255, a: 0}
+  restColor: {r: 0, g: 0, b: 0, a: 0}
   TimeToRest: 5
 --- !u!114 &549967223
 MonoBehaviour:
@@ -5428,7 +5428,7 @@ MonoBehaviour:
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
-  restColor: {r: 255, g: 255, b: 255, a: 0}
+  restColor: {r: 0, g: 0, b: 0, a: 0}
   TimeToRest: 5
 --- !u!114 &753725200
 MonoBehaviour:
@@ -5875,7 +5875,7 @@ MonoBehaviour:
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
-  restColor: {r: 255, g: 255, b: 255, a: 0}
+  restColor: {r: 0, g: 0, b: 0, a: 0}
   TimeToRest: 5
 --- !u!114 &1652469087
 MonoBehaviour:
@@ -5969,7 +5969,7 @@ MonoBehaviour:
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
-  restColor: {r: 255, g: 255, b: 255, a: 0}
+  restColor: {r: 0, g: 0, b: 0, a: 0}
   TimeToRest: 5
 --- !u!114 &1828205229
 MonoBehaviour:
