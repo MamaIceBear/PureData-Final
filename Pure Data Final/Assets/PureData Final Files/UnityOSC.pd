@@ -105,10 +105,10 @@ for later;
 #X text 122 107 Sound #1;
 #N canvas -8 -8 1920 997 jump 0;
 #X obj 263 543 dac~;
-#X obj 460 336 vsl 15 128 0 10 0 1 empty empty empty 0 -9 0 10 -4032
+#X obj 413 437 vsl 15 128 0 10 0 1 empty empty empty 0 -9 0 10 -4032
 -1 -1 12700 1;
 #X obj 314 420 *~;
-#X floatatom 381 404 5 0 0 0 - - -;
+#X floatatom 353 478 5 0 0 0 - - -;
 #X obj 209 95 r jumpSound;
 #X text 96 121 Click here to test the sound., f 15;
 #X obj 315 289 vcf~ 600 23;
@@ -127,9 +127,16 @@ for later;
 #X obj 411 214 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 10 -262144 -1 -1 300 256;
 #X obj 349 125 lop~ 0.1;
-#X text 111 45 Voice Sound #1: Player character's jump sound inspired
-Obiwannabe's wind implementation. By Sam Nguyen;
 #X msg 207 172 1 100 \, 0 500 75;
+#X text 111 45 Voice Sound #1: Player character's jump sound inspired
+Obiwannabe's wind implementation. Reconfigured by Sam Nguyen;
+#X text 406 95 Noise object to get multitudes of random samples;
+#X text 420 123 Low Pass Filter;
+#X text 412 292 Voltage Control Filter;
+#X text 449 188 Clip object to control the range of the sounds;
+#X text 451 480 Volume Control;
+#X text 391 360 Band pass filter;
+#X text 99 168 Sound plays for about 0.6 seconds, f 13;
 #X connect 1 0 3 0;
 #X connect 2 0 11 1;
 #X connect 3 0 2 1;
@@ -137,7 +144,7 @@ Obiwannabe's wind implementation. By Sam Nguyen;
 #X connect 6 0 7 0;
 #X connect 7 0 14 0;
 #X connect 8 0 6 2;
-#X connect 9 0 20 0;
+#X connect 9 0 19 0;
 #X connect 10 0 11 0;
 #X connect 11 0 0 0;
 #X connect 11 0 0 1;
@@ -149,7 +156,7 @@ Obiwannabe's wind implementation. By Sam Nguyen;
 #X connect 16 0 6 1;
 #X connect 17 0 16 1;
 #X connect 18 0 12 0;
-#X connect 20 0 10 0;
+#X connect 19 0 10 0;
 #X restore 127 133 pd jump;
 #X text 203 107 Sound #2;
 #X text 296 108 Sound #3;
@@ -172,8 +179,6 @@ Obiwannabe's wind implementation. By Sam Nguyen;
 #X text 265 247 Random noise object;
 #X text 288 277 Keeps the noise samples within a certain range;
 #X text 419 496 Volume control;
-#X text 71 85 Sound #2: Cymbal landing sound effect. By Sam Nguyen
-;
 #X obj 135 583 *~;
 #X obj 91 544 *~;
 #X obj 125 394 *~;
@@ -182,9 +187,11 @@ Obiwannabe's wind implementation. By Sam Nguyen;
 #X obj 199 380 hsl 128 15 0 10 0 1 empty empty Gain -2 -8 0 10 -257985
 -1 -1 5300 1;
 #X text 362 449 Reverb implementation referenced by QCGInteractiveMusic
-on YOUTUBE;
+on YOUTUBE, f 35;
 #X text 334 376 Initial impact loudness;
 #X obj 155 451 rev2~ 100 80 1000 20, f 27;
+#X text 71 85 Sound #2: Cymbal landing sound effect. Created by Sam
+Nguyen;
 #X connect 0 0 6 0;
 #X connect 2 0 9 0;
 #X connect 3 0 4 0;
@@ -192,30 +199,30 @@ on YOUTUBE;
 #X connect 4 0 2 0;
 #X connect 5 0 8 0;
 #X connect 6 0 3 0;
-#X connect 7 0 20 0;
-#X connect 7 0 18 0;
+#X connect 7 0 19 0;
+#X connect 7 0 17 0;
 #X connect 8 0 2 1;
-#X connect 9 0 19 0;
+#X connect 9 0 18 0;
 #X connect 10 0 0 0;
+#X connect 16 0 1 0;
+#X connect 16 0 1 1;
 #X connect 17 0 1 0;
-#X connect 17 0 1 1;
-#X connect 18 0 1 0;
-#X connect 19 0 17 0;
-#X connect 19 0 25 0;
-#X connect 20 0 1 1;
-#X connect 21 0 17 1;
-#X connect 22 0 19 1;
-#X connect 25 0 18 1;
-#X connect 25 1 20 1;
+#X connect 18 0 16 0;
+#X connect 18 0 24 0;
+#X connect 19 0 1 1;
+#X connect 20 0 16 1;
+#X connect 21 0 18 1;
+#X connect 24 0 17 1;
+#X connect 24 1 19 1;
 #X restore 208 134 pd landing;
-#N canvas 194 316 802 578 crashing 0;
+#N canvas 258 235 802 578 crashing 0;
 #X obj 183 469 *~;
 #X obj 177 512 dac~;
-#X obj 451 357 vsl 15 128 0 3 0 1 empty empty empty 0 -9 0 10 -4032
+#X obj 474 387 vsl 15 128 0 3 0 1 empty empty empty 0 -9 0 10 -4032
 -1 -1 8800 1;
 #X obj 182 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 253 464 5 0 0 0 - - -;
+#X floatatom 289 472 5 0 0 0 - - -;
 #X obj 234 213 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 10 -262144 -1 -1 24 256;
 #X obj 182 298 mtof;
@@ -229,15 +236,15 @@ on YOUTUBE;
 , f 29;
 #X obj 262 365 phasor~;
 #X obj 182 159 r crashSound;
-#X text 479 420 Volume changer;
+#X text 506 457 Volume changer;
 #X obj 223 398 clip~ 0.2 0.7;
 #X msg 265 245 1 25 \, 0 300 100;
-#X text 324 393 Keeps the samples within a certain range.;
-#X text 128 102 Sound #3 Inspired by the pulsewave patch which is configured
-to make create an echo-y death sound whenever the player collides with
-a structure. By Sam Nguyen;
+#X text 323 393 Keeps the samples within a certain range., f 18;
 #X text 71 299 Midi to Float;
 #X text 320 292 Smooth envelope;
+#X text 128 102 Sound #3 Inspired by the week 3's pulsewave patch which
+is used to make create an echo-y death sound whenever the player collides
+with a structure. Reconfigured by Sam Nguyen;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 4 0;
