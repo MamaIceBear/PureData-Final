@@ -561,8 +561,8 @@ with a structure. Reconfigured by Sam Nguyen;
 #X obj 910 433 sel 0 1;
 #X floatatom 944 397 5 0 0 0 - - -;
 #X obj 939 366 random 2;
-#X text 813 317 appropriate synths;
-#X text 717 296 Reads Melody/Bass Tables and sends thoes notes to the
+#X text 1007 240 appropriate synths;
+#X text 882 227 Reads Melody/Bass Tables and sends thoes notes to the
 ;
 #X text 829 515 Each of these contains different;
 #X text 840 532 set of 4 bass measures;
@@ -643,7 +643,7 @@ with a structure. Reconfigured by Sam Nguyen;
 #X connect 7 0 8 0;
 #X connect 10 0 5 0;
 #X connect 10 0 6 0;
-#X restore 791 268 pd tableReads;
+#X restore 879 203 pd tableReads;
 #X floatatom 642 379 5 0 0 0 - - -;
 #N canvas 0 50 841 552 metroMel1 0;
 #X obj 166 141 metro 1680;
@@ -755,6 +755,8 @@ with a structure. Reconfigured by Sam Nguyen;
 #X connect 3 0 1 1;
 #X restore 701 494 pd metroMel2;
 #X obj 637 348 random 3;
+#X text 463 556 Randomly Select which batch of notes to send to the
+melody synth;
 #X connect 0 0 5 0;
 #X connect 1 0 16 0;
 #X connect 1 0 28 0;
