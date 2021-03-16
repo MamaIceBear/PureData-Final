@@ -5149,7 +5149,8 @@ MonoBehaviour:
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 0, g: 0, b: 0, a: 0}
-  TimeToRest: 20
+  beatColor: {r: 0.11792451, g: 1, b: 0.14128688, a: 1}
+  TimeToRest: 13
 --- !u!114 &406508536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5243,7 +5244,8 @@ MonoBehaviour:
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 0, g: 0, b: 0, a: 0}
-  TimeToRest: 20
+  beatColor: {r: 1, g: 0.9626852, b: 0, a: 1}
+  TimeToRest: 13
 --- !u!114 &549967223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5429,7 +5431,8 @@ MonoBehaviour:
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 0, g: 0, b: 0, a: 0}
-  TimeToRest: 20
+  beatColor: {r: 1, g: 0.44920295, b: 0, a: 1}
+  TimeToRest: 13
 --- !u!114 &753725200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5870,13 +5873,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3447cb3f328942e45ba28346415334f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minFreq: 10
-  maxFreq: 100
+  minFreq: 100
+  maxFreq: 250
   mel: 0
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 0, g: 0, b: 0, a: 0}
-  TimeToRest: 20
+  beatColor: {r: 0.013616921, g: 0.92473674, b: 0.9622642, a: 1}
+  TimeToRest: 13
 --- !u!114 &1652469087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5970,7 +5974,8 @@ MonoBehaviour:
   frequency: 0
   sprite: {fileID: 0}
   restColor: {r: 0, g: 0, b: 0, a: 0}
-  TimeToRest: 20
+  beatColor: {r: 1, g: 0.07450981, b: 1, a: 1}
+  TimeToRest: 13
 --- !u!114 &1828205229
 MonoBehaviour:
   m_ObjectHideFlags: 0
