@@ -11,6 +11,7 @@ public class ChallengeController : MonoBehaviour
     string previousObj = "";
 
     public Transform challengesSpawnPoint;
+    public static bool gameStart = false;
     bool isGameOver = false;
     bool crashSound = true;
 
@@ -21,34 +22,37 @@ public class ChallengeController : MonoBehaviour
 
     void Update()
     {
-        if(isGameOver)
+        if(gameStart)
         {
-            if(crashSound)
+            if(isGameOver)
             {
-                OSCHandler.Instance.SendMessageToClient("pd", "/unity/crash", 1);
-                crashSound = false;
+                if(crashSound)
+                {
+                    OSCHandler.Instance.SendMessageToClient("pd", "/unity/crash", 1);
+                    crashSound = false;
+                }
+                return;
             }
-            return;
-        }
-        //Generate Objects
-        if(counter <= 0f)
-        {
-            GenerateRandomChallenge();
-        }
-        else
-        {
-            counter -= Time.deltaTime * frequency;
-        }
-
-        //Scrolling
-        GameObject currentChild;
-        for(int i = 0; i < transform.childCount; i++)
-        {
-            currentChild = transform.GetChild(i).gameObject;
-            ScrollChallenge(currentChild);
-            if(currentChild.transform.position.x <= -20.0f)
+            //Generate Objects
+            if(counter <= 0f)
             {
-                Destroy(currentChild);
+                GenerateRandomChallenge();
+            }
+            else
+            {
+                counter -= Time.deltaTime * frequency;
+            }
+
+            //Scrolling
+            GameObject currentChild;
+            for(int i = 0; i < transform.childCount; i++)
+            {
+                currentChild = transform.GetChild(i).gameObject;
+                ScrollChallenge(currentChild);
+                if(currentChild.transform.position.x <= -20.0f)
+                {
+                    Destroy(currentChild);
+                }
             }
         }
     }

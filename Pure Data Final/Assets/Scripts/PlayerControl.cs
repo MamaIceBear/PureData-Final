@@ -17,21 +17,23 @@ public class PlayerControl : MonoBehaviour
        myRigidbody = GetComponent<Rigidbody2D>();
        posX = transform.position.x;
        myChallengeController = GameObject.FindObjectOfType<ChallengeController>();
-       OSCHandler.Instance.SendMessageToClient("pd", "/unity/musicStart", 1);
     }
 
     void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Space) && numJumps > 0 && !isGameOver)
+        if(ChallengeController.gameStart)
         {
-            myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
-            numJumps -= 1;
-            OSCHandler.Instance.SendMessageToClient("pd", "/unity/jump", 1);
-            OSCHandler.Instance.SendMessageToClient("pd", "/unity/height", transform.position.y);
-        }
-        if(transform.position.x < posX)
-        {
-            GameOver();
+            if(Input.GetKeyDown(KeyCode.Space) && numJumps > 0 && !isGameOver)
+            {
+                myRigidbody.AddForce(Vector3.up * (jumpPower * myRigidbody.mass * myRigidbody.gravityScale * 20.0f));
+                numJumps -= 1;
+                OSCHandler.Instance.SendMessageToClient("pd", "/unity/jump", 1);
+                OSCHandler.Instance.SendMessageToClient("pd", "/unity/height", transform.position.y);
+            }
+            if(transform.position.x < posX)
+            {
+                GameOver();
+            }
         }
     }
 
@@ -41,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         isGameOver = true;
         myChallengeController.GameOver();
         OSCHandler.Instance.SendMessageToClient("pd", "/unity/musicStart", 0);
+        OSCHandler.Instance.SendMessageToClient("pd", "/unity/toggle", 0);
     }
 
     void OnCollisionEnter2D(Collision2D other) 

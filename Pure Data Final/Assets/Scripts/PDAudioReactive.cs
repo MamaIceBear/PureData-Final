@@ -44,12 +44,14 @@ public class PDAudioReactive : MonoBehaviour
                 }
             }
         }
-
-        if (minFreq <= frequency && frequency < maxFreq){
+        if(ChallengeController.gameStart)
+        {
+            if (minFreq <= frequency && frequency < maxFreq){
             m_img.color = Color.Lerp(m_img.color, beatColor, TimeToRest * Time.deltaTime);
         }
-        else{
-            m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
+            else{
+                m_img.color = Color.Lerp(m_img.color, restColor, TimeToRest * Time.deltaTime);
+            }
         }
     }
 }

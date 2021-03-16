@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioGainReactive : MonoBehaviour
 {
-    
     public AudioSource audioSource;
     public float updateStep = 0.1f;
     public int sampleDataLen = 1024;
